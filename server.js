@@ -36,6 +36,13 @@ app.use(userRoutes);
 app.use(bankRoutes);
 app.use(adminRoutes);
 
+app.get("/test", (req, res) => {
+  res.json({
+    message: "All ok",
+    success: true,
+  });
+});
+
 // Start the server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
